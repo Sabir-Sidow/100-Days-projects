@@ -23,11 +23,11 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-mission_one = input("there are to road choose one (left or right)")
+mission_one = input("there are to road choose one (left or right)").lower()
 if mission_one == "left":
-    mission_two = input("there is a see fron do you want to (Swim or wait)")
+    mission_two = input("there is a see fron do you want to (Swim or wait)").lower()
     if mission_two == "wait":
-        mission_three = input("Three dors with three colors choos one of (red , yellow or blue)")
+        mission_three = input("Three dors with three colors choos one of (red , yellow or blue)").lower()
         if mission_three == "yellow":
             print("YOU WIN")
         elif mission_three == "blue":
