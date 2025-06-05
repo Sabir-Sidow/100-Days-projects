@@ -3,7 +3,7 @@ import random
 player = 0
 com = 0
 options = ["rock", "paper", "scissors"]
-player_choise = input("choos (rock paper or scissors").lower()
+player_choise = input("choos (rock paper or scissors).lower()
 com_choise = random.choice(options)
 
 if player_choise == "rock" and com_choise == "scissors":
