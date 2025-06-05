@@ -33,4 +33,4 @@ else:
     print("Computer Wins")
     com += 1
 
-print(f"your score {player}\ncomputer score {com}")
+print(f"your score {player}\ncomputer score {com} ")
