@@ -1,0 +1,36 @@
+import random
+
+player = 0
+com = 0
+options = ["rock", "paper", "scissors"]
+player_choise = input("choos (rock paper or scissors").lower()
+com_choise = random.choice(options)
+
+if player_choise == "rock" and com_choise == "scissors":
+    print(f"you choise {player_choise}")
+    print(f"computer choise {com_choise}")
+    print("You win")
+    player += 1
+
+elif player_choise == "paper" and com_choise == "rock":
+    print(f"you choise {player_choise}")
+    print(f"computer choise {com_choise}")
+    print("You win")
+    player += 1
+
+elif player_choise == "scissors" and com_choise == "paper":
+    print(f"you choise {player_choise}")
+    print(f"computer choise {com_choise}")
+    print("You win")
+    player += 1
+
+elif player_choise == com_choise:
+    print("Draw")
+
+else:
+    print(f"you choise {player_choise}")
+    print(f"computer choise {com_choise}")
+    print("Computer Wins")
+    com += 1
+
+print(f"your score {player}\ncomputer score {com}")
