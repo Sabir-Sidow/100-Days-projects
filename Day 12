@@ -1,0 +1,50 @@
+import random
+from art import logo
+print(logo)
+
+def set_difficulty():
+    difficulty = input("Choose a difficulty. Type (easy or hard): ").lower()
+    if difficulty == "easy":
+        return 10
+    elif difficulty == "hard":
+        return 5
+    else:
+        print("Invalid input")
+        return 0
+
+def get_user_guess():
+    return int(input("Guess the number between 1 and 100: "))
+
+def check_guess(user_guess, number_to_guess, lives):
+    if user_guess > number_to_guess:
+        print("Too high")
+        return lives - 1
+    elif user_guess < number_to_guess:
+        print("Too low")
+        return lives - 1
+    else:
+        print("You win")
+        return -1
+
+def game():
+    print("I am thinking of a number between 1 and 100")
+    lives = set_difficulty()
+    if lives == 0:
+        return
+
+    number_to_guess = random.randint(1, 100)
+
+    while lives > 0:
+        user_guess = get_user_guess()
+        result = check_guess(user_guess, number_to_guess, lives)
+
+        if result == -1:
+            break
+        else:
+            lives = result
+            print(f"You have {lives} lives left")
+
+    if lives == 0:
+        print(f"You lose! The number was {number_to_guess}")
+
+game()
