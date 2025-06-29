@@ -1,0 +1,39 @@
+import turtle
+import colorgram
+import random
+
+color_list = [(233, 233, 232), (231, 233, 238), (237, 232, 234), (221, 232, 225), (208, 160, 81), (55, 89, 132), (145, 91, 40), (139, 26, 48), (222, 208, 104), (132, 177, 203), (45, 55, 104), (158, 45, 84), (169, 159, 39), (128, 189, 143), (84, 20, 44), (38, 43, 66), (186, 94, 106), (189, 138, 166), (84, 124, 182), (60, 39, 30), (79, 153, 165), (87, 157, 90), (195, 79, 72), (160, 201, 220), (45, 74, 77), (79, 74, 43), (59, 125, 113), (218, 176, 188), (167, 207, 166), (220, 181, 168), (178, 189, 212), (45, 75, 74), (148, 36, 33), (41, 64, 62)]
+
+
+timmy = turtle.Turtle()
+screen = turtle.Screen()
+turtle.colormode(255)
+timmy.speed("fastest")
+timmy.penup()
+
+start_x = -200
+start_y = -200
+
+rows = 10
+cols = 10
+dot_distance = 50
+
+for row in range(rows):
+    for col in range(cols):
+        x = start_x + col * dot_distance
+        y = start_y + row * dot_distance
+        timmy.goto(x, y)
+        timmy.dot(20, random.choice(color_list))
+
+
+
+
+
+
+
+
+
+
+
+
+screen.exitonclick()
